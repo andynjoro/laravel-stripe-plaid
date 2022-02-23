@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow">
             <div class="container">
                 <span class="navbar-brand">
-                    Travis Wood Payment Portal
+                    Payment Portal
                 </span>
             </div>
         </nav>
@@ -35,9 +35,6 @@
 
         <nav class="navbar mt-5 navbar-dark bg-dark p-4" id="footer_nav">
             <div class="container">
-                <div class="text-white font-weight-light">
-                    &copy; {{ date("Y") }} Travis Wood LLC.
-                </div>
                 <div class="text-white font-weight-light bg-light rounded text-secondary p-2">
                     We use Stripe and Plaid to securely verify and process all our ACH transactions. We do not collect or store payment details on this website.
                 </div>

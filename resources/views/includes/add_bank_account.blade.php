@@ -1,6 +1,6 @@
 <div>
     <h3 class="mb-3">Connect bank account</h3>
-    
+
     <div id="plaid_errors" class="alert alert-danger d-none"></div>
 
     <div class="mt-4">
@@ -62,7 +62,7 @@
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="button" id="addBankAccountButton" class="btn btn-primary">Submit</button>
                             </div>
-                        </form>    
+                        </form>
                     </div>
                 </div>
             </div>
@@ -71,12 +71,12 @@
 </div>
 
 <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
-<script>    
+<script>
     var user_error = "Something went wrong while trying to link your bank account. Please try again later.";
 
     var linkHandler = Plaid.create({
         env: '{{ env('PLAID_ENV') }}',
-        clientName: 'Travis Wood',
+        clientName: '{{ env('PLAID_CLIENT_NAME') }}',
         key: '{{ env('PLAID_KEY') }}',
         product: ['auth'],
         selectAccount: true,
@@ -147,7 +147,7 @@
                 .fail(function() {
                     $('#processing_modal').modal('hide');
                     $('#addBankAccountModal').modal('show');
-                    
+
                     $("#add_bank_account_errors").html(user_error).removeClass("d-none");
                 });
             }

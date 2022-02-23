@@ -11,7 +11,6 @@
 <body>
     <h1 style="font-family: Helvetica, Arial, sans-serif;">Your Two Factor Authentication Code</h1>
     <h2 style="font-family: Helvetica, Arial, sans-serif;">{{ $token }}</h2>
-    <p style="font-family: Helvetica, Arial, sans-serif;">Thanks,<br>Travis Wood LLC.</p>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
         <div class="col-8">
             <h2>Charge {{ $customer->name }}</h2>
         </div>
-        
+
         <div class="col-4 text-right">
             <a href="{{ url('/') }}" class="btn btn-link">&lsaquo; Back to All Customers</a>
         </div>
@@ -61,35 +61,12 @@
 </div>
 
 <script>
-    // function setSelectionRange(input, selectionStart, selectionEnd) {
-    //     if (input.setSelectionRange) {
-    //         input.focus();
-    //         input.setSelectionRange(selectionStart, selectionEnd);
-    //     } else if (input.createTextRange) {
-    //         var range = input.createTextRange();
-    //         range.collapse(true);
-    //         console.log(collapse);
-    //         range.moveEnd('character', selectionEnd);
-    //         range.moveStart('character', selectionStart);
-    //         range.select();
-    //     }
-    // }
-
-    // function setCaretToPos(input, pos) {
-    //     setSelectionRange(input, pos, pos);
-    // }
-
-    // $("#money").on("click, focus" function() {
-    //     var inputLength = $("#money").val().length;
-
-    //     setCaretToPos($("#money")[0], inputLength)
-    // });
     document.addEventListener('DOMContentLoaded', function() {
         $('#amount').mask('#,##0.00', {
             placeholder: "0.00",
             reverse: true
         });
     });
-    
+
 </script>
 @endsection
